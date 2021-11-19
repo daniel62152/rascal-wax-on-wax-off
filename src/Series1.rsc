@@ -1,5 +1,6 @@
 module Series1
 
+import IO;
 
 /*
  * Documentation: http://docs.rascal-mpl.org 
@@ -15,6 +16,7 @@ module Series1
  */
  
 void helloWorld() {
+	println("Hello World");
 } 
 
 
@@ -24,13 +26,16 @@ void helloWorld() {
  * - implement as list-returning function
  */
  
-void fizzBuzz() {
-
+void fizzbuzz(int x) {
+   for (int n <- [1 .. x]) {
+      fb = ((n % 3 == 0) ? "Fizz" : "") + ((n % 5 == 0) ? "Buzz" : "");
+      println((fb == "") ?"<n>" : fb);
+   }
 }
 
-list[str] fizzBuzz() {
-
-}
+//list[str] fizzBuzz() {
+//
+//}
 
 /*
  * Factorial
